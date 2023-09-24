@@ -69,11 +69,11 @@ public class Anfibio extends Animal {
 		this.colorPiel = colorPiel;
 	}
 
-	public boolean getVenenoso() {
+	public boolean isVenenoso() {
 		return venenoso;
 	}
 
-	public void isVenenoso(boolean venenoso) {
+	public void setVenenoso(boolean venenoso) {
 		this.venenoso = venenoso;
 	}
 	
