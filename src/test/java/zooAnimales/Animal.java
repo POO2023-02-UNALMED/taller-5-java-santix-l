@@ -1,7 +1,5 @@
 package zooAnimales;
 
-import java.util.ArrayList;
-
 import gestion.Zona;
 
 public class Animal {
@@ -11,7 +9,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private ArrayList<Zona> zona = new ArrayList<>();
+	private Zona zona;
 	
 	public Animal() {
 		
@@ -24,7 +22,7 @@ public class Animal {
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		this.zona = new ArrayList<>();
+		this.zona = null;
 		
 	}
 	
@@ -80,18 +78,30 @@ public class Animal {
 		this.genero = genero;
 	}
 
-	public ArrayList<Zona> getZona() {
+	public Zona getZona() {
 		return zona;
 	}
 
-	public void setZona(ArrayList<Zona> zona) {
+	public void setZona(Zona zona) {
 		this.zona = zona;
 	}
+	
+	//“Mi nombre es #nombre, tengo una edad de #edad, habito en #habitat y mi genero es
+	//#genero, la zona en la que me ubico es #zona, en el #zoo”
 
 	public String toString() {
 		
-		return "Mi nombre es "+ nombre +", tengo una edad de " + edad + ", habito en "+ habitat + " y mi genero es " + genero + ", la zona en la que me ubico es "+ zona +", en el zoo";
+		if(zona != null) {
+			
+			return "Mi nombre es "+ this.nombre +", tengo una edad de " + this.edad + ", habito en "+ this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es "+ zona.getNombre() +", en el " + zona.getZoo();
+		}
+		
+		else {
+			return "Mi nombre es "+ this.nombre +", tengo una edad de " + this.edad + ", habito en "+ this.habitat + " y mi genero es " + this.genero;
+		}
 	}
+	
+	
 	
 	
 
