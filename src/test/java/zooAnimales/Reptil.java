@@ -11,7 +11,7 @@ public class Reptil extends Animal {
 	private int largoCola;
 	
 	public Reptil() {
-		
+		listado.add(this);
 	}
 
 
@@ -29,9 +29,10 @@ public class Reptil extends Animal {
 		return "reptar";
 	}
 	
-	public  static int cantidadReptiles() {
+	public static int cantidadReptiles() {
 		
 		return listado.size();
+
 	}
 	
 	public static Reptil crearSerpiente(String nombre, int edad, String genero) {
