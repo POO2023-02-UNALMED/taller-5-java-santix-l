@@ -17,7 +17,7 @@ public class Animal {
 		
 	}
 	
-	public Animal(String nombre, int edad, String genero, String habitat) {
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		
 		totalAnimales++;
 		this.nombre = nombre;

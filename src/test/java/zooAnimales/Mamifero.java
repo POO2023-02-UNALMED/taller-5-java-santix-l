@@ -14,8 +14,8 @@ public class Mamifero extends Animal {
 		
 	}
 
-	public Mamifero(String nombre, int edad, String genero, String habitat, boolean pelaje, int patas) {
-		super(nombre, edad, genero, habitat);
+	public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
+		super(nombre, edad, habitat, genero);
 		this.pelaje = pelaje;
 		this.patas = patas;
 		listado.add(this);
@@ -29,7 +29,7 @@ public class Mamifero extends Animal {
 	
 	public static Mamifero crearCaballo(String nombre, int edad, String genero) {
 		
-		Mamifero caballo = new Mamifero(nombre, edad , genero, "pradera", true, 4);
+		Mamifero caballo = new Mamifero(nombre, edad , "pradera", genero, true, 4);
 		
 		caballos++;
 		
@@ -38,7 +38,7 @@ public class Mamifero extends Animal {
 	
 	public static Mamifero crearLeon(String nombre, int edad, String genero) {
 		
-		Mamifero leon = new Mamifero(nombre, edad , genero, "selva", true, 4);
+		Mamifero leon = new Mamifero(nombre, edad , "selva", genero, true, 4);
 		
 		leones++;
 		
