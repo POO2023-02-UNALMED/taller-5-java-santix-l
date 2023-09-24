@@ -24,7 +24,7 @@ public class Animal {
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		//zona.add();
+		this.zona = new ArrayList<>();
 		
 	}
 	
