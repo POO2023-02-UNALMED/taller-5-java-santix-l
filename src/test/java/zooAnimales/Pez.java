@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Pez extends Animal {
 	
 	private static ArrayList<Pez> listado = new ArrayList<>();
-	public int salmones;
-	public int bacalaos;
+	public static int salmones;
+	public static int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
@@ -33,7 +33,7 @@ public class Pez extends Animal {
 		return listado.size();
 	}
 	
-	public Pez crearSalmon(String nombre, int edad, String genero) {
+	public static Pez crearSalmon(String nombre, int edad, String genero) {
 		
 		Pez salmon = new Pez(nombre, edad , genero, "oceano", "rojo" , 6);
 		
@@ -42,7 +42,7 @@ public class Pez extends Animal {
 		return salmon;
 	}
 	
-	public Pez crearBacalao(String nombre, int edad, String genero) {
+	public static Pez crearBacalao(String nombre, int edad, String genero) {
 		
 		Pez bacalao = new Pez(nombre, edad , genero, "oceano", "gris" , 6);
 		
